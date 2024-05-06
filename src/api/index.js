@@ -3,8 +3,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const cors = require("cors");
-let port = 3030;
 require("dotenv").config({path: './auth.env'});
+let port = process.env.apiPort;
 const verificationCodeChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!@#$%^&*()-_=+[]{}\\|;:\",<.>/?";
 const responseErrorTemplate = require("./packets.js").responseErrorTemplate;
 const responseTemplate = require("./packets.js").responseTemplate;
@@ -17,6 +17,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.post('/verify', async (req, res) => {
+    let errorCode = 422;
     let currentResponse = { ...responseTemplate };
     let currentRequest = { ...requestTemplate };
     let currentErrorResponse = { ...responseErrorTemplate };
@@ -92,7 +93,7 @@ app.post('/verify', async (req, res) => {
 
     res.json(currentResponse);
 } catch(err) {
-    currentErrorResponse.error_code = 422;
+    currentErrorResponse.error_code = errorCode; //TODO The error code should not be always 422
     currentErrorResponse.error_message = err.message;
     res.status(422).json(currentErrorResponse);
     return;
@@ -103,6 +104,7 @@ app.post('/verify', async (req, res) => {
 
 
 app.listen(port, () => {
+    console.log(`Starting api on Port ${port}`);
     mailer.checkDotenv();
 });
 
