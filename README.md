@@ -7,7 +7,7 @@ A simple verification api to verify diffrent emails
 
 ## Installation
 
-The installation guid for Verifly
+The installation guide for Verifly
 
 1. Clone the repository
 
