@@ -99,25 +99,25 @@ fetch("http://urlToApi.com/verify", {
     .catch(err => console.log(err));
 ```
 
-
 ## FAQ
 
-#### The "git clone" command was not found
+#### Q: The "git clone" command was not found
 
-If you get this error when trying to run ```git clone```, it is likely because git is not installed.  
+**A:** If you get this error when trying to run ```git clone```, it is likely because git is not installed.  
 To install git, follow this guide:
 https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
-#### The "npm" command was not found
+#### Q: The "npm" command was not found
 
-If you get this error when trying to run ```npm install```, it is likely because npm is not installed.  
+**A:** If you get this error when trying to run ```npm install```, it is likely because npm is not installed.  
 To install npm, follow this guide:  
 https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
 
-#### I have an other issue
+#### Q: I have an ther issue
 
-If you have another issue related to Verifly feel free to open an issue on:  
+**A:** If you have another issue related to Verifly feel free to open an issue on:  
 https://github.com/Randware/Verifly/issues
+
 ## Authors
 
 - [@Dari-OS](https://www.github.com/Dari-OS)
