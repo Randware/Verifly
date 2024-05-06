@@ -68,6 +68,20 @@ password="password"
 
 ```
 
+Another example for [Mailtrap](https://mailtrap.io/)  
+```env
+apiPort=3030
+host="sandbox.smtp.mailtrap.io"
+port=2525
+service=""
+secure=
+secureConnection=false
+rejectUnauthorized=false
+display_name="Verifly"
+user="0d4f******"
+password="c0629*****"
+```
+
 ## API Reference
 
 #### Send the verification code
