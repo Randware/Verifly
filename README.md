@@ -43,6 +43,7 @@ https://nodemailer.com/smtp/
 | `port` | `integer` | the host port to connect to |
 | `service` | `string` | the service of your email. Leave blank if you have an host address|
 | `secure` | `boolean` | enforce the use of SSL |
+| `secureConnection` | `boolean` | enforce the use of TSL |
 | `rejectUnauthorized` | `boolean` |  allows TLS server with self-signed or invalid TLS certificate |
 | `display_name` | `string` |  the display name of the sender |
 | `user` | `string` | the email (username) of the sender |
