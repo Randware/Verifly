@@ -5,8 +5,7 @@
   "main": "src/api/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/api/index.js",
-    "getMX": "node src/api/MXrecord.js domain"
+    "start": "node src/api/index.js"
   },
   "author": "randware",
   "license": "MIT",
