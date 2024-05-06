@@ -21,7 +21,9 @@ The installation guid for Verifly
     npm install
     ```
 3. Modify the auth.env configuration
-    
+   
+    Update the authentication credentials to enable sending emails.  
+    See the documentation of the [Environment Variables](#environment-variables-refrence)
     
 4. Run the api in the directory with the repository
 
