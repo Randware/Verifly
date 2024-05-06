@@ -66,14 +66,18 @@ class Mailer {
   checkDotenv() {
     
     let exit = false;
+    if (process.env.apiPort === "put_api_port_here") {
+      console.log(`Please change the apiPort variable in the auth.env file.`);
+      exit = true;
+    }
     if (isNaN(process.env.apiPort)) {
       console.log(`Please change the apiPort variable in the auth.env file to a valid number.`);
       exit = true;
-  }
-  if (Number(process.env.apiPort) < 1 || Number(process.env.apiPort) > 65535) {
+    }
+    if (Number(process.env.apiPort) < 1 || Number(process.env.apiPort) > 65535) {
     console.log(`Please change the apiPort variable in the auth.env file to a valid port. See https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers`);
     exit = true;
-}
+    }
     if (process.env.host === "put_email_host_here") {
         console.log(`Please change the host variable in the auth.env file.`);
         exit = true;
