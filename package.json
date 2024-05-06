@@ -1,5 +1,5 @@
 {
-  "name": "verificationapi",
+  "name": "verifly",
   "version": "1.0.0",
   "description": "A simple API to verify emails",
   "main": "src/api/index.js",
