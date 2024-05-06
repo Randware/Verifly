@@ -18,7 +18,7 @@ class Mailer {
     this.checkDotenv();
     const transporter = {
       host: process.env.host,
-      secureConnection: process.env.secure,
+      secure: process.env.secure,
       port: process.env.port,
       auth: {
         user: process.env.user,
