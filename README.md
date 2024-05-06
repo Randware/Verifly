@@ -68,7 +68,7 @@ password="password"
 
 ```
 
-Another example for [Mailtrap](https://mailtrap.io/)  
+An example for [Mailtrap](https://mailtrap.io/)  
 ```env
 apiPort=3030
 host="sandbox.smtp.mailtrap.io"
@@ -80,6 +80,21 @@ rejectUnauthorized=false
 display_name="Verifly"
 user="0d4f******"
 password="c0629*****"
+```
+
+An example for [MailerSend](https://www.mailersend.com/)
+```env
+apiPort=3030
+host="smtp.mailersend.net"
+port=587
+service=""
+secure=
+secureConnection=false
+rejectUnauthorized=false
+display_name="Verifly"
+user="ex_ample@trial-XXX.mlsender.net"
+password="gGHqZR9t*******"
+
 ```
 
 ## API Reference
