@@ -88,7 +88,7 @@ const requestBody = {
     html: "<p>Here is your verification code: ${verification_code}<p>"
 }
 
-fetch("http://localhost:3030/verify", {
+fetch("http://urlToApi.com/verify", {
     method: "POST",
     headers: {
         'Content-Type': 'application/json'
