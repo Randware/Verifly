@@ -162,7 +162,7 @@ https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 To install npm, follow this guide:  
 https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
 
-#### Q: I have an ther issue
+#### Q: I have another issue
 
 **A:** If you have another issue related to Verifly feel free to open an issue on:  
 https://github.com/Randware/Verifly/issues
