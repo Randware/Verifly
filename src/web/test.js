@@ -5,7 +5,7 @@ const requestBody = {
     html: "<p>Example text. Here is your verification code: ${verification_code}<p>"
 }
 console.log(JSON.stringify(requestBody));
-fetch("http://localhost:3030/verify", {
+fetch("http://urlToApi.com/verify", {
     method: "POST",
     headers: {
         'Content-Type': 'application/json'
