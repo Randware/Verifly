@@ -39,10 +39,11 @@ https://nodemailer.com/smtp/
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
+| `apiPort` | `integer` |  the port on which the API runs |
 | `host` | `string` |  the smtp host (smtp.example.com) |
 | `port` | `integer` | the host port to connect to |
 | `service` | `string` | the service of your email. Leave blank if you have an host address|
-| `secure` | `boolean` | enforce the use of SSL |
+| `secure` | `boolean` | enable or disable the use of SSL (leave blank if you don't know what you so) |
 | `secureConnection` | `boolean` | enforce the use of TSL |
 | `rejectUnauthorized` | `boolean` |  allows TLS server with self-signed or invalid TLS certificate |
 | `display_name` | `string` |  the display name of the sender |
