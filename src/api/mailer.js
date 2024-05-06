@@ -18,7 +18,8 @@ class Mailer {
     this.checkDotenv();
     const transporter = {
       host: process.env.host,
-      secure: process.env.secure,
+  
+      secureConnection: process.env.secureConnection,
       port: process.env.port,
       auth: {
         user: process.env.user,
@@ -32,6 +33,10 @@ class Mailer {
     if (process.env.service !== "") {
       transporter.service = process.env.service;
     }
+    if (process.env.secure !== "") {
+      transporter.secure = process.env.secure;
+    }
+
     this.#transporter = nodemailer.createTransport(transporter);
   }
 
@@ -61,6 +66,14 @@ class Mailer {
   checkDotenv() {
     
     let exit = false;
+    if (isNaN(process.env.apiPort)) {
+      console.log(`Please change the apiPort variable in the auth.env file to a valid number.`);
+      exit = true;
+  }
+  if (Number(process.env.apiPort) < 1 || Number(process.env.apiPort) > 65535) {
+    console.log(`Please change the apiPort variable in the auth.env file to a valid port. See https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers`);
+    exit = true;
+}
     if (process.env.host === "put_email_host_here") {
         console.log(`Please change the host variable in the auth.env file.`);
         exit = true;
@@ -78,14 +91,21 @@ class Mailer {
         exit = true;
     }
     
-    if (!((process.env.secure).toLowerCase() === "true" || (process.env.secure).toLowerCase() === "false")){
-        console.log(`Please change the secure variable in the auth.env file to a valid boolean. (true or false)`);
+
+    if (!((process.env.secure).toLowerCase() === "true" || (process.env.secure).toLowerCase() === "false" || process.env.secure === "")){
+        console.log(`Please change the secure variable in the auth.env file to a valid boolean (true or false) or leave it blank (recommended).`);
         exit = true;
     }
-    if (!((process.env.rejectUnauthorized).toLowerCase() === "true" || (process.env.rejectUnauthorized).toLowerCase() === "false")){
-      console.log(`Please change the rejectUnauthorized variable in the auth.env file to a valid boolean. (true or false)`);
+    if (!((process.env.secureConnection).toLowerCase() === "true" || (process.env.secureConnection).toLowerCase() === "false")){
+      console.log(`Please change the secureConnection variable in the auth.env file to a valid boolean. (true or false)`);
       exit = true;
   }
+  if (!((process.env.rejectUnauthorized).toLowerCase() === "true" || (process.env.rejectUnauthorized).toLowerCase() === "false")){
+    console.log(`Please change the rejectUnauthorized variable in the auth.env file to a valid boolean. (true or false)`);
+    exit = true;
+}
+
+  
   if (process.env.display_name === "put_your_display_name_here") {
     console.log(`Please change the display_name variable in the auth.env file.`);
     exit = true;
