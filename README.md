@@ -51,6 +51,22 @@ https://nodemailer.com/smtp/
 | `password` | `string` | the password of the given email |
 
 
+### Auth.env examples
+
+Here is an auth.env example for outlook:
+```env
+apiPort=3030
+host="smtp-mail.outlook.com"
+port=587
+service=""
+secure=
+secureConnection=false
+rejectUnauthorized=false
+display_name="Verifly"
+user="example@outlook.com"
+password="password"
+
+```
 
 ## API Reference
 
