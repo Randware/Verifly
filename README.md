@@ -53,7 +53,7 @@ https://nodemailer.com/smtp/
 
 ### Auth.env examples
 
-Here is an auth.env example for outlook:
+Here is an auth.env example for [Outlook](https://outlook.com/):
 ```env
 apiPort=3030
 host="smtp-mail.outlook.com"
