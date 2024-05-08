@@ -1,13 +1,20 @@
+<dl>
+    <img align="left" height="300" src="https://raw.githubusercontent.com/Randware/Verifly/main/.github/img/verifly-logo%20(by%20Hadi%20Sadik).png" alt="The Verifly logo">
+</dl>
 
-# Verifly
-A simple verification API to verify different emails
-<p align="left">
-<img src="https://github.com/Randware/Verifly/blob/main/.github/img/verifly-logo%20(by%20Hadi%20Sadik).png?raw=true" width=40% height=40%>
-</p>
+### Verifly
+---
+An open source self hosted API solution for email verification.
+
+Verifly creates an API endpoint, which can be used to request a random verification code and send it to the specified email afterwards. 
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-## Installation
+_Logo by Hadi Sadik_
+
+<br clear="left"/>
+
+### Installation
 
 The installation guide for Verifly
 
@@ -173,5 +180,5 @@ https://github.com/Randware/Verifly/issues
 
 - [@Dari-OS](https://www.github.com/Dari-OS)
 - [@GHaxZ](https://www.github.com/GHaxZ)
-- [(Logo) Hadi Sadik](about:blank)
+
 
