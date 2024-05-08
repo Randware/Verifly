@@ -11,25 +11,25 @@ The installation guide for Verifly
 
 1. Clone the repository
 
-    ```bash
-    cd desired/target/directory
-    git clone https://github.com/Randware/Verifly
-    ```
-2. Install the dependencies 
+    ```bash
+    cd desired/target/directory
+    git clone https://github.com/Randware/Verifly
+    ```
+2. Install the dependencies 
 
-    ```bash
-    npm install
-    ```
+    ```bash
+    npm install
+    ```
 3. Modify the auth.env configuration
-   
-    Update the authentication credentials to enable sending emails.  
-    See the documentation for the [Environment Variables](#environment-variables-refrence)
-    
-4. Run the API in the directory with the repository
+   
+    Update the authentication credentials to enable sending emails.  
+    See the documentation of the [Environment Variables](#environment-variables-refrence)
+    
+4. Run the api in the directory with the repository
 
-    ```bash
-    npm run
-    ```
+    ```bash
+    npm run
+    ```
 
 ## Environment Variables Refrence
 
