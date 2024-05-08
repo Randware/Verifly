@@ -1,7 +1,9 @@
 
 # Verifly
-
 A simple verification API to verify different emails
+<p align="left">
+<img src="https://github.com/Randware/Verifly/blob/main/.github/img/verifly-logo%20(by%20Hadi%20Sadik).png?raw=true" width=40% height=40%>
+</p>
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
@@ -171,5 +173,5 @@ https://github.com/Randware/Verifly/issues
 
 - [@Dari-OS](https://www.github.com/Dari-OS)
 - [@GHaxZ](https://www.github.com/GHaxZ)
-
+- [(Logo) Hadi Sadik](about:blank)
 
