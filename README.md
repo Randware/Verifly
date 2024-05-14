@@ -1,6 +1,4 @@
-<dl>
-    <img align="left" height="300" src="https://raw.githubusercontent.com/Randware/Verifly/main/.github/img/verifly-logo%20(by%20Hadi%20Sadik).png" alt="The Verifly logo">
-</dl>
+<img align="left" height="300" src="https://raw.githubusercontent.com/Randware/Verifly/main/.github/img/verifly-logo%20(by%20Hadi%20Sadik).png" alt="The Verifly logo">
 
 ### Verifly
 ---
@@ -10,7 +8,7 @@ Verifly creates an API endpoint, which can be used to request a random verificat
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-_Logo by Hadi Sadik_
+<sub><i>Logo by Hadi Sadik</i></sub>
 
 <br clear="left"/>
 
