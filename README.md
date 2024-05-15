@@ -2,9 +2,9 @@
 
 ### Verifly
 ---
-An open source self hosted API solution for email verification.
+An open-source, self-hosted API solution for email verification.
 
-Verifly creates an API endpoint, which can be used to request a random verification code and send it to the specified email afterwards. 
+Verifly creates an API endpoint, which can be used to request a random verification code and send it to the specified email afterwards.
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
