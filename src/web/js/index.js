@@ -21,7 +21,7 @@ let verificationCode = "test";
 function checkEmail() {
     let input = emailInput.value;
 
-    if(emailRegex.test(input)) {
+    if (emailRegex.test(input)) {
         validEmail();
     } else {
         invalidEmail();
@@ -34,20 +34,8 @@ function validEmail() {
     invalidEmailDisplay.classList.add("invisible")
 }
 
-function invalidEmail() {
-    emailSubmitButton.setAttribute("disabled", true);
-    invalidEmailDisplay.classList.remove("invisible")
-    validEmailDisplay.classList.add("invisible")
-}
-
 function sendVerification() {
     let email = emailInput.value.trim();
-
-    verificationEmailPlaceholder.innerHTML = emailSentText.replace("$EMAIL$", email);
-
-    verificationModal.show();
-
-    return;
 
     const requestBody = {
         email: email,
@@ -55,7 +43,7 @@ function sendVerification() {
         html: "<p>Here is your verification code: ${verification_code}</p>"
     }
 
-    fetch("http://localhost:3030", {
+    fetch("http://127.0.0.1:3030", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
@@ -63,7 +51,12 @@ function sendVerification() {
         body: JSON.stringify(requestBody)
     }).then(res => res.json())
         .then(data => {
+            console.log(data)
             verificationCode = data.verification_code;
+
+            verificationEmailPlaceholder.innerHTML = emailSentText.replace("$EMAIL$", email);
+
+            verificationModal.show();
         })
         .catch(err => {
             displayError(err);
@@ -71,10 +64,16 @@ function sendVerification() {
         });
 }
 
+function invalidEmail() {
+    emailSubmitButton.setAttribute("disabled", true);
+    invalidEmailDisplay.classList.remove("invisible")
+    validEmailDisplay.classList.add("invisible")
+}
+
 function checkVerificationCode() {
     let input = verificationCodeInput.value.trim();
 
-    if(input === verificationCode) {
+    if (input === verificationCode) {
         validVerficationCode();
     } else {
         invalidVerificationCode();
@@ -98,7 +97,7 @@ verificationCodeSubmit.addEventListener("click", function () {
     checkVerificationCode();
 });
 
-emailSubmit.addEventListener("click", function() {
+emailSubmit.addEventListener("click", function () {
     sendVerification();
 });
 
