@@ -3,6 +3,7 @@ const emailSubmitButton = document.getElementById("email-submit");
 const validEmailDisplay = document.getElementById("valid-email");
 const invalidEmailDisplay = document.getElementById("invalid-email");
 const emailSubmit = document.getElementById("email-submit");
+const sendingSpinner = document.getElementById("sending-spinner");
 
 const verificationModal = new bootstrap.Modal(document.getElementById("verification-modal"));
 const verificationEmailPlaceholder = document.getElementById("verification-email-placeholder");
@@ -34,7 +35,17 @@ function validEmail() {
     invalidEmailDisplay.classList.add("invisible")
 }
 
+function invalidEmail() {
+    emailSubmitButton.setAttribute("disabled", true);
+    invalidEmailDisplay.classList.remove("invisible")
+    validEmailDisplay.classList.add("invisible")
+}
+
 function sendVerification() {
+    emailSubmitButton.setAttribute("disabled", true);
+    emailSubmitButton.classList.add("invisible");
+    sendingSpinner.classList.remove("invisible");
+
     let email = emailInput.value.trim();
 
     const requestBody = {
@@ -43,7 +54,7 @@ function sendVerification() {
         html: "<p>Here is your verification code: ${verification_code}</p>"
     }
 
-    fetch("http://127.0.0.1:3030", {
+    fetch("http://127.0.0.1:3030/verify", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
@@ -64,17 +75,14 @@ function sendVerification() {
         });
 }
 
-function invalidEmail() {
-    emailSubmitButton.setAttribute("disabled", true);
-    invalidEmailDisplay.classList.remove("invisible")
-    validEmailDisplay.classList.add("invisible")
-}
+
 
 function checkVerificationCode() {
     let input = verificationCodeInput.value.trim();
 
     if (input === verificationCode) {
         validVerficationCode();
+        resetFields();
     } else {
         invalidVerificationCode();
     }
@@ -87,6 +95,19 @@ function validVerficationCode() {
 
 function invalidVerificationCode() {
     invalidVerificationCodeDisplay.classList.remove("invisible")
+}
+
+function resetFields() {
+    emailInput.value = "";
+    verificationCodeInput.value = "";
+
+    invalidEmailDisplay.classList.add("invisible");
+    validEmailDisplay.classList.add("invisible");
+    emailSubmitButton.removeAttribute("disabled");
+    emailSubmitButton.classList.remove("invisible");
+    sendingSpinner.classList.add("invisible");
+
+    invalidVerificationCodeDisplay.classList.add("invisible");
 }
 
 function displayError(error) {
