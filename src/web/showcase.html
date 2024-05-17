@@ -49,7 +49,7 @@
                         <span class="p-2 p-sm-0">
                           <i class="bi bi-play-fill fs-3"></i>
                         </span>
-                        <a class="nav-link" href="./showcase.html">Showcase</a>
+                        <a class="nav-link active" href="./showcase.html">Showcase</a>
                     </li>
                 </ul>
             </div>
@@ -58,6 +58,55 @@
 </header>
 
 <main class="my-auto">
+    <div id="verification-modal" class="modal fade" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Verification</h4>
+                </div>
+
+                <div class="modal-body d-flex flex-column gap-4">
+                    <div id="verification-email-placeholder" class="fs-6 fw-medium">We have sent a verification code.</div>
+
+                    <div class="d-flex flex-column gap-3">
+                        <label class="fs-6 fw-bold" for="email-input">Please enter the verification code</label>
+                        <input id="verification-code-input" type="text" class="form-control" placeholder="Your verification code">
+
+                        <div id="invalid-verification-code" class="invisible">
+                            <div class="d-flex gap-2 align-items-center text-danger">
+                                <i class="bi bi-x fs-3"></i>
+                                <div class="fs-6 fw-bold">This code is not valid.</div>
+                            </div>
+                        </div>
+
+                        <button id="verification-code-submit" type="button" class="btn btn-warning">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="success-modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Success!</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" data-bs-target="#success-modal"></button>
+                </div>
+
+                <div class="modal-body d-flex flex-column gap-4">
+                    <div class="d-flex gap-2 align-items-center text-success">
+                        <i class="bi bi-check fs-3"></i>
+                        <div class="fs-6 fw-bold">You successfully verified your email!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="container-fluid d-flex flex-column gap-5" style="margin-top: 130px;">
         <div class="row justify-content-center align-items-center text-center">
             <div class="d-flex flex-column col-10 col-sm-8 col-md-6 gap-3">
@@ -89,9 +138,7 @@
                 </div>
 
 
-                <button id="email-submit" type="submit" class="btn btn-warning" disabled>Submit</button>
-
-
+                <button onclick="" id="email-submit" type="submit" class="btn btn-warning" disabled>Submit</button>
             </div>
         </div>
     </div>
@@ -116,7 +163,6 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"
 ></script>
-<script src="https://cdn.jsdelivr.net/npm/ace-builds@1.33.2/src-min-noconflict/theme-chrome.min.js"></script>
 <script src="./js/index.js"></script>
 </body>
 
