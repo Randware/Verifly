@@ -57,7 +57,7 @@
     </nav>
 </header>
 
-<main class="my-auto">
+<main class="mt-5">
     <div id="verification-modal" class="modal fade" data-bs-backdrop="static">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -66,7 +66,7 @@
                     <h4 class="modal-title">Verification</h4>
                 </div>
 
-                <div class="modal-body d-flex flex-column gap-4">
+                <div id="verification-modal-body" class="modal-body d-flex flex-column gap-4">
                     <div id="verification-email-placeholder" class="fs-6 fw-medium">We have sent a verification code.</div>
 
                     <div class="d-flex flex-column gap-3">
@@ -106,7 +106,6 @@
         </div>
     </div>
 
-
     <div class="container-fluid d-flex flex-column gap-5" style="margin-top: 130px;">
         <div class="row justify-content-center align-items-center text-center">
             <div class="d-flex flex-column col-10 col-sm-8 col-md-6 gap-3">
@@ -137,7 +136,7 @@
                     </div>
                 </div>
 
-
+                <div id="sending-spinner" class="mx-auto spinner-border text-warning invisible" role="status"></div>
                 <button onclick="" id="email-submit" type="submit" class="btn btn-warning" disabled>Submit</button>
             </div>
         </div>
