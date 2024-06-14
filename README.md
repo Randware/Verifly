@@ -27,7 +27,7 @@ Verifly creates an API endpoint, which can be used to request a random verificat
     ```bash
     npm install
     ```
-3. Modify the auth.env configuration
+3. Modify the auth.env configuration file
    
     Update the authentication credentials to enable sending emails.  
     See the documentation of the [Environment Variables](#environment-variables-refrence)
