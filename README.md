@@ -14,7 +14,7 @@ Verifly creates an API endpoint, which can be used to request a random verificat
 
 ### Installation
 
-The installation guide for Verifly
+#### The installation guide for Verifly
 
 1. Clone the repository
 
