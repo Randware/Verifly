@@ -1,6 +1,6 @@
 <img align="left" width="300" src="https://raw.githubusercontent.com/Randware/Verifly/main/.github/img/verifly-logo%20(by%20Hadi%20Sadik).png" alt="The Verifly logo">
 
-### Verifly
+## Verifly
 ---
 An open-source, self-hosted API solution for email verification.
 
