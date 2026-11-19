@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/api/index.js",
     "dev:api": "nodemon src/api/index.js --watch ./src/api/",
-    "dev:web": "live-server --port=3031 src/web ",
+    "dev:web": "vite src/web --port 3031 --strictPort",
     "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\""
   },
   "author": "randware",
@@ -15,12 +15,15 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "nodemailer": "^6.9.13"
+    "express": "^4.22.3",
+    "nodemailer": "^10.6.0"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
-    "live-server": "^1.2.2",
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "vite": "^7.3.8"
+  },
+  "overrides": {
+    "minimatch@10.2.6": "11.0.1"
   }
 }
